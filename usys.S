@@ -1,6 +1,6 @@
 #include "syscall.h"
 #include "traps.h"
-
+//this is where the signal is "called" when communicating between the user and kernel space
 #define SYSCALL(name) \
   .globl name; \
   name: \
@@ -29,3 +29,5 @@ SYSCALL(getpid)
 SYSCALL(sbrk)
 SYSCALL(sleep)
 SYSCALL(uptime)
+SYSCALL(hello)
+SYSCALL(waitpid)
